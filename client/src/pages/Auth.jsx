@@ -12,10 +12,10 @@ import { useNavigate } from "react-router-dom"; //вместо useHistory
 
 const Auth = observer(({show, onHide, setAuthVisible}) => {
     const { user } = useContext(Context);
-    const location = useLocation(); //можно получить маршрут в строке запроса
-    const navigate = useNavigate(); //после того, как пользователь залогинился, отправляем его на главную страницу
+    const location = useLocation(); //получить маршрут в строке запроса
+    const navigate = useNavigate(); //после того, как пользователь залогинился, отправлять его на главную страницу
     const isLogin = location.pathname === LOGIN_ROUTE; //будет true, если маршрут совпадает с login_route
-    //сделаем инпуты управляемыми
+    //сделать инпуты управляемыми
     const [email, setEmail] = useState('');  //состояние содержит значение инпута с имейлом
     const [password, setPassword] = useState(''); //состояние содержит значение инпута с паролем
 
